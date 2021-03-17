@@ -1,0 +1,7 @@
+.header {
+  background-color: #fff;
+}
+
+.header__wrapper {
+  @include wrapper;
+}

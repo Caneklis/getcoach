@@ -1,0 +1,225 @@
+---
+title: Главная страница
+lang: ru
+---
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="promo">
+  <div class="promo__slogan">
+    <div class="promo__logo">
+      <img src="/img/logo-circle.svg" width="158" height="158" alt="">
+      <img src="/img/logo.svg" width="162" height="30" alt="">
+    </div>
+    <h2 class="promo__title">ставь цели. <br>
+      ставь getcoach</h2>
+  </div>
+  <div class="promo__links">
+    <a href="#" class="promo__link" data-aos="fade-right">Ищу тренера</a>
+    <a href="#" class="promo__link" data-aos="fade-left">Я — тренер!</a>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="how__wrapper">
+    <div class="how__title">
+      <h2>Как это работает?</h2>
+      <p>Укажите ваши цели, бюджет, цели тренировки.</p>
+      <p>Мы найдём лучшего тренера именно для вас.</p>
+    </div>
+    <ul class="how__list">
+      <li class="how__item  how__item--step-one" data-aos="zoom-in">
+        <h3>Оставьте заявку</h3>
+        <p>Укажите ваши пожелания <br>и вводную информацию для тренера</p>
+      </li>
+      <li class="how__item  how__item--step-two" data-aos="zoom-in">
+        <h3>Мы найдем лучшего тренера</h3>
+        <p>Вам не нужно изучать сотни анкет <br>на разных площадках</p>
+      </li>
+      <li class="how__item  how__item--step-three" data-aos="zoom-in">
+        <h3>тренер составит программу</h3>
+        <p>Тренер возьмет вас на онлайн- сопровождение, составит программу</p>
+      </li>
+      <li class="how__item  how__item--step-four" data-aos="zoom-in">
+        <h3>становитесь лучше!</h3>
+        <p>Тренируйтесь, отслеживайте прогресс и становитесь еще лучше!</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="advantages">
+  <div class="advantages__wrapper">
+    <article class="advantages__article  advantages__article--right" id="advantages" data-aos="fade-right">
+      <!-- <img src="img/app-screen.png" alt=""> -->
+      <div class="advantages__text">
+        <h2>Наш сервис нужен вам <span>если</span></h2>
+        <ul>
+          <li>В вашем зале нет профессиональных тренеров</li>
+          <li> Персональные тренировки слишком дорогие</li>
+          <li>Вам нужен прогресс в тренировках</li>
+          <li>Не можете найти грамотного тренера для онлайн-сопровождения</li>
+          <li>Сложно отслеживать тренировки и прогресс в блокноте или заметках телефона</li>
+        </ul>
+      </div>
+    </article>
+    <article class="advantages__article  advantages__article--left" data-aos="fade-left">
+      <div class="advantages__text">
+        <h2>Преимущества <span>сервиса</span></h2>
+        <ul>
+          <li>Более 1000 проверенных тренеров. Мы проверяем профессионализм всех тренеров</li>
+          <li>Безопасная оплата. Тренер получит деньги, только после выполнения заявки</li>
+          <li>Индивидуальный подход. Искусственный интеллект найдет <br>вам тренера, а тренер составит вам персональные
+            программы.</li>
+          <li>Персональный тренер в кармане. Весь функционал приложения для вас бесплатен.</li>
+        </ul>
+      </div>
+      <article class="download" data-aos="zoom-in">
+        <h2>Скачать легко</h2>
+        <ul class="download__list">
+          <li class="download__item">
+            <a href="#">
+              <img src="/img/google-play.png" alt="Логотип магазина Google Play">
+            </a>
+          </li>
+          <li class="download__item">
+            <a href="#">
+              <img src="/img/appstore.png" alt="Логотип магазина AppStore">
+            </a>
+          </li>
+        </ul>
+      </article>
+      <!-- <img src="img/man.png" alt=""> -->
+    </article>
+  </div>
+</section>
+
+<section class="be-coach" id="be-coach">
+  <div class="be-coach__wrapper">
+    <div class="be-coach__slogan" data-aos="fade-right">
+      <div class="be-coach__slogan-line">Ты тренер?</div>
+      <div class="be-coach__slogan-line  be-coach__slogan-line--second">Не «тяни резину»</div>
+      <div class="be-coach__slogan-line  be-coach__slogan-line--third">— скачивай <span>GetCoach!</span></div>
+    </div>
+  </div>
+  <article class="be-coach__article">
+    <div class="be-coach__wrapper">
+      <div class="be-coach__article-text" data-aos="fade-left">
+        <h2>Я тренер, зачем мне GetCoach?</h2>
+        <ul>
+          <li><b>Новые клиенты.</b> Мы обработали уже более 1000 заявок ваших потенциальных клиентов. </li>
+          <li><b>Честная конкуренция.</b> Конкурируйте знаниями и опытом, а не страницами в социальных сетях.</li>
+          <li><b>Мобильность.</b> Работайте со всеми клиентами в едином месте, накапливайте базу знаний, зарабатывайте
+            удаленно!
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>
+  <form action="#" class="contact-form">
+    <h2 class="contact-form__title">Стать тренером</h2>
+    <p>Оставляй свои координаты, и мы расскажем как сервис GetCoach поможет тебе достичь новых высот!</p>
+    <div class="contact-form__fields">
+      <div class="contact-form__field">
+        <input type="text" placeholder="ФИО">
+      </div>
+      <div class="contact-form__field">
+        <input type="email" placeholder="Электронная почта">
+      </div>
+      <div class="contact-form__field">
+        <input type="text" placeholder="Мобильный телефон">
+      </div>
+    </div>
+    <button class="contact-form__btn" type="submit">Зарегистрироваться</button>
+    <div class="contact-form__check">
+      <input class="visually-hidden" type="checkbox" id="check" required>
+      <label for="check">Даю согласие на обработку персональных данных и соглашаюсь с условиями <a
+          href="#">договора-оферты</a></label>
+    </div>
+    <div class="contact-form__popup">
+      <div class="contact-form__popup-wrapper">
+        <p>Ваше сообщение отправлено!</p>
+        <p>Мы скоро с Вами свяжемся</p>
+        <button class="contact-form__btn  contact-form__btn--close" type="button">Закрыть</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="slider" data-aos="zoom-in-right">
+  <div class="slider__wrapper">
+    <h2 class="slider__title">Наши лучшие тренеры</h2>
+    <p class="slider__subtitle">Помогут добиться всего, чего вы захотите!</p>
+
+    <ul class="slider__list">
+      {% for i in range(0, 6) -%}
+      <li class="coach-card">
+        <div class="coach-card__photo">
+          <img src="/img/coach-photo.jpg" alt="Фотография тренера" width="216" height="216">
+        </div>
+        <p class="coach-card__name">Назаретян Артём</p>
+        <p class="coach-card__type">кекусинкай-каратэ</p>
+        <div class="coach-card__table">
+          <table>
+            <tbody>
+              <tr>
+                <td>Опыт</td>
+                <td><b>125 лет</b></td>
+              </tr>
+              <tr>
+                <td>Образование</td>
+                <td><b>высшее</b></td>
+              </tr>
+              <tr>
+                <td>Рейтинг</td>
+                <td><b>5,00</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+
+  <div class="reviews__slider">
+    <div class="reviews__wrapper">
+
+      <div class="reviews-title">
+        <h2>Отзывы наших клиентов</h2>
+        <p>Благодаря вашим отзывам мы становимся лучше! Для вас.</p>
+      </div>
+      <ul class="reviews__slider-nav slider-nav">
+        {% for i in range(0, 6) -%}
+        <li class="reviews__slider-author">
+          <div class="reviews__slider-author-photo">
+            <img src="/img/client.jpg" width="216" height="216" alt="Фотография автора отзыва">
+          </div>
+          <p class="reviews__author-name">Арнольд Густавович Ш.</p>
+          <p class="reviews__author-info">домохозяин, <br>бывший губернатор</p>
+        </li>
+        {%- endfor %}
+      </ul>
+      <ul class="reviews__slider-for slider-for">
+        {% for i in range(0, 6) -%}
+        <li class="reviews__slider-answer">
+          <div class="reviews__text">
+            <p>С тех пор, как я оставил государственный пост, у меня появилось время для себя. Раньше я немного качался,
+              но теперь благодаря GetCoach я могу делать это под руководством профессиональных тренеров. Бросил курить
+              сигары, катаюсь на велосипеде, жму помаленьку. Классно, что приложение бесплатное, а то на пенсию
+              губернатора особенно не разгуляешься.
+            </p>
+          </div>
+          <!-- <button class="reviews__btn" type="button">Оставить отзыв</button> -->
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

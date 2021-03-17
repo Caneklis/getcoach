@@ -1,0 +1,122 @@
+.be-coach {
+  padding-top: 114px;
+}
+
+.be-coach__wrapper {
+  @include wrapper;
+}
+
+.be-coach__slogan {
+  width: 50%;
+  margin-left: auto;
+  margin-bottom: 92px;
+  padding-left: 14px;
+  font-size: 44px;
+  line-height: 1.23;
+  font-family: $base-font-bold-italic;
+  font-style: italic;
+
+  @media (max-width: 1280px) {
+    width: 70%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 35px;
+  }
+}
+
+.be-coach__slogan-line {
+  &--second {
+    padding-left: 60px;
+
+    @media (max-width: 768px) {
+      padding-left: 30px;
+    }
+  }
+
+  &--third {
+    padding-left: 138px;
+
+    @media (max-width: 768px) {
+      padding-left: 60px;
+    }
+  }
+
+  span {
+    color: $base-color;
+  }
+}
+
+.be-coach__article {
+  background-color: $base-color;
+}
+
+.be-coach__article-text {
+  width: 50%;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-top: 45px;
+  padding-bottom: 230px;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 13px;
+    font-size: 44px;
+    font-family: $base-font-bold-italic;
+    font-style: italic;
+    color: #fff;
+  }
+
+  ul {
+    @include list-reset;
+  }
+
+  li {
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: -35px;
+      display: block;
+      width: 18px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: -28px;
+      display: block;
+      width: 4px;
+      height: 18px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+  }
+
+  b,
+  strong {
+    font-family: $base-font-bold;
+  }
+}

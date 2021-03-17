@@ -1,0 +1,51 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin wrapper {
+  min-width: 320px;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin btn {
+  display: inline-block;
+  min-width: 305px;
+  padding: 13px 35px;
+  text-align: center;
+  color: #fff;
+  font-family: $base-font-bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  background-color: $base-color;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.4s;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: darken($base-color, 5%);
+  }
+}
+
+@mixin title {
+  margin: 0;
+  font-family: $base-font-bold-italic;
+  font-size: 44px;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+@mixin subtitle {
+  margin: 0;
+  font-family: $base-font-bold;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}

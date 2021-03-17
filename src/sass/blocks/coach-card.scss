@@ -1,0 +1,84 @@
+.coach-card {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 1440px) {
+    padding: 0 20px;
+  }
+}
+
+.coach-card__photo {
+  width: 242px;
+  height: 242px;
+  margin-bottom: 10px;
+  border: 14px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.coach-card__name {
+  margin: 0;
+  font-family: $base-font-bold-italic;
+  font-size: 25px;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+.coach-card__type {
+  min-height: 60px;
+  margin: 0;
+  margin-bottom: 7px;
+  font-family: $base-font-bold-italic;
+  font-size: 22px;
+  line-height: 1.2;
+  color: $base-color;
+  font-style: italic;
+  text-align: center;
+}
+
+.coach-card__table {
+  font-size: 20px;
+  line-height: 20px;
+  padding-right: 30px;
+
+  @media (max-width: 1025px) {
+    align-self: flex-start;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+      vertical-align: top;
+      padding: 5px 0;
+
+      b,
+      strong {
+        font-family: $base-font-bold;
+        font-weight: 700;
+      }
+      &:first-child {
+        //max-width: 120px;
+        padding-right: 8px;
+        text-align: left;
+      }
+
+      &:nth-child(2) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      @media (max-width: 1025px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

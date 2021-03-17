@@ -1,0 +1,51 @@
+.slider {
+  padding-top: 89px;
+  padding-bottom: 96px;
+}
+
+.slider__wrapper {
+  @include wrapper;
+}
+
+.slider__list {
+  @include list-reset;
+  padding-top: 45px;
+  padding-left: 27px;
+  padding-right: 27px;
+}
+
+.slider__title {
+  @include title;
+}
+
+.slider__subtitle {
+  @include subtitle;
+}
+
+.slider__prev-btn,
+.slider__next-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 30px;
+  height: 35px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  top: 148px;
+}
+
+.slider__prev-btn {
+  left: 5px;
+}
+
+.slider__next-btn {
+  right: 5px;
+}
+
+.slider__icon {
+  width: 100%;
+  color: $base-color;
+}

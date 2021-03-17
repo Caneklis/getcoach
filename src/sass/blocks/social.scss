@@ -1,0 +1,22 @@
+.social {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 1599px) {
+    width: 50%;
+  }
+
+  @media (max-width: 1439px) {
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+
+.social__item {
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}

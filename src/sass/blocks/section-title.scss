@@ -1,0 +1,11 @@
+.section-title {
+  margin-bottom: 48px;
+
+  h2 {
+    @include title;
+  }
+
+  p {
+    @include subtitle;
+  }
+}

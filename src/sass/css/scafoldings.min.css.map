@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CACD,CAAC,AAAA,QAAQ,CACT,CAAC,AAAA,OAAO,AAAC,CACP,UAAU,CAAE,UAAU,CACvB",
+    "sources": [
+        "../global/scafoldings.scss"
+    ],
+    "names": [],
+    "file": "scafoldings.min.css"
+}

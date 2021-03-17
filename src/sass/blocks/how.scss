@@ -1,0 +1,189 @@
+.how__wrapper {
+  @include wrapper;
+}
+
+.how__title {
+  margin-bottom: 50px;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 44px;
+    font-family: $base-font-bold-italic;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  p {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.3;
+    font-family: $base-font-bold;
+  }
+}
+
+.how__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 37px;
+
+  @media (max-width: 1439px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.how__item {
+  position: relative;
+  padding: 18px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+
+  &--step-one {
+    h3 {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        display: block;
+        width: 44px;
+        height: 46px;
+        background-image: url("../img/how-1.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &--step-two {
+    h3 {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 6px;
+        display: block;
+        width: 44px;
+        height: 58px;
+        background-image: url("../img/how-2.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &--step-three {
+    h3 {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 6px;
+        display: block;
+        width: 57px;
+        height: 57px;
+        background-image: url("../img/how-3.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &--step-four {
+    h3 {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 6px;
+        display: block;
+        width: 55px;
+        height: 56px;
+        background-image: url("../img/how-4.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 84px;
+    right: -27px;
+    display: block;
+    width: 16px;
+    height: 19px;
+    background-image: url("../img/icons/icon-arrow-next-green.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1439px) {
+    &:nth-child(2n) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    &::after {
+      top: auto;
+      bottom: -30px;
+      left: 50%;
+      transform: rotate(90deg) translateX(-50%);
+    }
+
+    &:nth-child(2n) {
+      &::after {
+        display: block;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+    padding-bottom: 77px;
+    font-size: 20px;
+    font-family: $base-font-bold;
+    color: $base-color;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.35;
+  }
+}
