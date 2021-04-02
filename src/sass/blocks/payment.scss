@@ -1,0 +1,21 @@
+.payment {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+
+  @media (max-width: 1599px) {
+    //width: 50%;
+    grid-column: 2/-1;
+  }
+}
+
+.payment__item {
+  display: flex;
+
+  a {
+    display: flex;
+    align-items: flex-end;
+  }
+}
