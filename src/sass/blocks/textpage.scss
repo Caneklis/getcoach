@@ -1,5 +1,5 @@
 .textpage {
-  padding-bottom: 900px;
+  padding-bottom: 1250px;
 
   @media (min-width: 768px) {
     padding-bottom: 600px;
@@ -25,4 +25,10 @@
       color: $base-color;
     }
   }
+}
+
+.textpage__list {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
 }

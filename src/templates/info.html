@@ -1,0 +1,145 @@
+---
+title: Информация
+lang: ru
+---
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="textpage">
+  <div class="textpage__wrapper">
+    <article class="textpage__article">
+      <h2>Solvery Mentoring CookBook</h2>
+      <div class="textpage__promo-text">
+        <p>Привет от всей команды Solvery! Эту методичку мы написали специально для наших менторов, чтобы знакомство с
+          сервисом было приятным и эффективным. </p>
+
+        <p>Здесь ты найдешь информацию по организационным, юридическим вопросам, а также рекомендации и советы по
+          улучшению занятий с учениками.</p>
+
+        <p>Если не нашел ответ на свой вопрос, то пиши Лизе в Telegram (@e_zharova) — скорее всего вы с ней уже знакомы
+          😉
+        </p>
+      </div>
+      <ol class="textpage__list">
+        <li class="textpage__list-item">
+          <section class="accordion">
+            <h3>Что такое менторство и зачем мы делаем Solvery:</h3>
+            <div class="accordion__wrapper">
+              <ul class="accordion__list">
+                <li class="accordion__item">
+                  <button type="button" class="accordion__title js-title">Кто такой ментор/наставник? Почему менторство
+                    это круто)</button>
+                  <div class="accordion__content">
+                    <p>Наставничество - это, по сути, помощь людям в более эффективном развитии. Эти отношения призваны
+                      укрепить уверенность и поддержать подопечных, чтобы они могли контролировать свое развитие и
+                      работу.
+                    </p>
+                    <p>Наставничество - это, по сути, помощь людям в более эффективном развитии. Эти отношения призваны
+                      укрепить уверенность и поддержать подопечных, чтобы они могли контролировать свое развитие и
+                      работу.
+                    </p>
+                    <p>Наставничество - это, по сути, помощь людям в более эффективном развитии. Эти отношения призваны
+                      укрепить уверенность и поддержать подопечных, чтобы они могли контролировать свое развитие и
+                      работу.
+                    </p>
+                    <ul>
+                      <li> Улучшить свои знания и закрыть пробелы, на которые раньше не хватало времени;</li>
+                      <li>Научиться давать и получать обратную связь и использовать это как источник роста;</li>
+                      <li>Улучшить лидерские навыки, эмпатию, навыки общения и ведения разговора;</li>
+                      <li>Дает возможность созидать и видеть результаты своей работы;</li>
+                      <li>Новые инсайты, которые приходят от общения с учениками.</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion__item">
+                  <button type="button" class="accordion__title js-title">Принципы ментора Solvery</button>
+                  <div class="accordion__content">Older types of accordions used small buttons to play
+                    pitches with the right hand. Some of these instruments were diatonic rather than chromatic. Some
+                    used
+                    a
+                    bisonic
+                    system that played a different note depending on the direction of the bellows. There is an endless
+                    variety of
+                    these "squeezebox"-type instruments in many traditions world-wide.</div>
+                </li>
+                <li class="accordion__item">
+                  <button type="button" class="accordion__title js-title">Навыки необходимые ментору</button>
+                  <div class="accordion__content">Accordions produce sound using air. The player compresses and expands
+                    the
+                    bellows
+                    to
+                    force air through pallets that cause little reeds to vibrate. The player presses a button or key to
+                    determine
+                    which pitch will sound. This is the same sound production method commonly used in the old reed
+                    organs
+                    popular
+                    in
+                    churches in the old west.</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li class="textpage__list-item">
+          <section class="accordion">
+            <h3>Рекомендации по заполнению Личного кабинета ментора:</h3>
+            <div class="accordion__wrapper">
+              <ul class="accordion__list">
+                <li class="accordion__item">
+                  <button type="button" class="accordion__title js-title">Теги</button>
+                  <div class="accordion__content">
+                    <p>Теги на сайте необходимы для того, чтобы ученики могли быстро найти ментора по нужной технологии.
+                      Поэтому важно корректно указать теги в ЛК ментора.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+      </ol>
+    </article>
+  </div>
+</section>
+
+<script>
+  let accordionContentOpen = 'accordion__content--open';
+  let accordionControls = document.querySelectorAll('.js-title');
+
+  if (accordionControls) {
+    for (let i = 0; i < accordionControls.length; i++) {
+      accordionControls[i].addEventListener('click', toggleItem, false);
+    }
+  }
+
+  function toggleItem(e) {
+    let openContent = document.querySelector('.' + accordionContentOpen);
+    let sameElem = false;
+    if (openContent) {
+      closeItem(openContent);
+      sameElem = openContent.previousElementSibling === e.target;
+    }
+    if (!sameElem) {
+      let panel = e.target.nextElementSibling;
+      openItem(panel);
+    }
+  }
+  function closeItem(openContent) {
+    openContent.classList.remove(accordionContentOpen);
+    openContent.style.maxHeight = 0;
+    openContent.style.padding = '0';
+  }
+  function openItem(panel) {
+    panel.classList.add(accordionContentOpen);
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+    panel.style.padding = '1em 1.5em 2em 1.5em';
+  }
+  // let defaultPanel = document.querySelector('.accordion__content');
+  // if (defaultPanel) {
+  //   defaultPanel.classList.remove(accordionContentOpen);
+  //   setTimeout(openItem, 1000, defaultPanel);
+  // }
+
+</script>
+
+{% endblock %}
