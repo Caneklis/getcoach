@@ -1,6 +1,9 @@
 .reviews {
   min-height: 1070px;
-  background: #45e6b8 url("../img/reviews-bg.jpg") no-repeat top center;
+  background-color: #45e6b8;
+  background-image: url("../img/reviews-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top 2px;
   background-size: cover;
 
   @media (max-width: 1600px) {
@@ -20,7 +23,7 @@
 .reviews__slider {
   padding-top: 108px;
   padding-bottom: 108px;
-  background-color: rgba(#2ce5af, 0.85);
+  // background-color: rgba(#2ce5af, 0.85);
 
   @media (max-width: 1600px) {
     padding-bottom: 50px;

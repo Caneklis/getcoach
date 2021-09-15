@@ -1,0 +1,43 @@
+.about {
+  background-color: #fff;
+}
+
+.about__wrapper {
+  @include wrapper;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 140px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.about__column {
+  margin-bottom: 35px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    @include title;
+    text-align: left;
+  }
+}
+
+.about__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 2%;
+  padding-top: 40px;
+
+  li {
+    width: 20%;
+  }
+}

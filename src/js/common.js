@@ -74,18 +74,18 @@ $(document).ready(function () {
     });
   });
 
-  function changeFoooterPosition() {
-    var footer = $(".footer");
-    var reviewsBlock = $(".reviews");
-    footer.css({ marginTop: -footer.height() - 37 * 2 });
-    reviewsBlock.css({ paddingBottom: footer.height() + 74 });
-  }
+  // function changeFoooterPosition() {
+  //   var footer = $(".footer");
+  //   var reviewsBlock = $(".reviews");
+  //   footer.css({ marginTop: -footer.height() - 37 * 2 });
+  //   reviewsBlock.css({ paddingBottom: footer.height() + 74 });
+  // }
 
-  changeFoooterPosition();
+  // changeFoooterPosition();
 
-  window.onresize = function (event) {
-    changeFoooterPosition();
-  };
+  // window.onresize = function (event) {
+  //   changeFoooterPosition();
+  // };
 
   // window.on("resize", changeFoooterPosition());
 });
