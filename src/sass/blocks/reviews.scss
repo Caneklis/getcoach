@@ -102,35 +102,35 @@
 }
 
 .reviews__text {
-  padding: 22px 70px 30px 71px;
-  background-color: #edfdf8;
-  border: 9px solid $base-color;
-  border-radius: 95px;
-  position: relative;
+  // padding: 22px 70px 30px 71px;
+  // background-color: #edfdf8;
+  // border: 9px solid $base-color;
+  // border-radius: 95px;
+  // position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    bottom: -103px;
-    left: 112px;
-    display: block;
-    width: 210px;
-    height: 114px;
-    background-image: url("../img/pin.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: 0;
+  //   bottom: -103px;
+  //   left: 112px;
+  //   display: block;
+  //   width: 210px;
+  //   height: 114px;
+  //   background-image: url("../img/pin.svg");
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  // }
 
   @media (max-width: 766px) {
-    margin-bottom: 60px;
-    border-width: 5px;
-    &::after {
-      left: 39px;
-      bottom: -51px;
-      width: 110px;
-      height: 57px;
-    }
+    // margin-bottom: 60px;
+    // border-width: 5px;
+    // &::after {
+    //   left: 39px;
+    //   bottom: -51px;
+    //   width: 110px;
+    //   height: 57px;
+    // }
   }
 
   p {
