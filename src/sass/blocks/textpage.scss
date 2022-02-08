@@ -11,6 +11,7 @@
 }
 .textpage__wrapper {
   @include wrapper;
+  padding-top: 60px;
 }
 
 .textpage__article {
