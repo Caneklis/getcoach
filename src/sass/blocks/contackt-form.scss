@@ -126,6 +126,12 @@
     font-size: 18px;
     margin: 0 auto;
   }
+
+  @media (max-width: 480px) {
+    font-size: 25px;
+    min-width: unset;
+    width: 100%;
+  }
 }
 
 .contact-form__check {
