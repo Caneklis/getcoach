@@ -1,5 +1,9 @@
 .help {
   background-color: #fff;
+
+  &--gray {
+    background-color: #f7f7f7;
+  }
 }
 
 .help__wrapper {
@@ -14,6 +18,21 @@
 .help__title {
   @include title;
   margin-bottom: 45px;
+
+  &--green {
+    display: flex;
+    flex-direction: column;
+    font-size: 57px;
+    line-height: 1.2;
+    font-family: $base-font-bold;
+    font-style: normal;
+
+
+    span {
+      color: $base-color;
+      font-family: $base-font-bold-italic;
+    }
+  }
 }
 
 .help__link {

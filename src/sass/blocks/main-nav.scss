@@ -42,6 +42,11 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media (max-width: 1430px) {
+    margin-top: 35px;
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
     display: none;
 
@@ -53,10 +58,10 @@
 }
 
 .main-nav__item {
-  margin-left: 60px;
+  margin-right: 60px;
   font-family: $base-font-bold;
 
-  &:first-child {
+  &:last-child {
     margin-left: 0;
   }
 
