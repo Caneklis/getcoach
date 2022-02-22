@@ -49,6 +49,22 @@
     &::before {
       display: none;
     }
+
+    .contact-form__fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 35px;
+
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+      }
+    }
+
+    .contact-form__field {
+      width: 100%;
+      margin: 0;
+    }
   }
 }
 

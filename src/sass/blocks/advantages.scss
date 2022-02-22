@@ -8,10 +8,14 @@
   &--white {
     background-color: #fff;
     padding-top: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 0;
 
     @media (max-width: 767px) {
       padding-bottom: 0;
+    }
+
+    .advantages__article {
+      padding-bottom: 90px;
     }
   }
 
