@@ -18,3 +18,13 @@ html {
   border: 0;
   clip: rect(0 0 0 0);
 }
+
+.scroll-lock-ios {
+  position: fixed;
+
+  overflow: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}

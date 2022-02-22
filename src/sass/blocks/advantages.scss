@@ -9,6 +9,10 @@
     background-color: #fff;
     padding-top: 80px;
     padding-bottom: 60px;
+
+    @media (max-width: 767px) {
+      padding-bottom: 0;
+    }
   }
 
   &--corp {
@@ -43,8 +47,8 @@
           line-height: 1.2;
 
           @media (max-width: 1023px) {
-           padding-left: 0;
-           font-size: 30px;
+            padding-left: 0;
+            font-size: 30px;
           }
         }
 
@@ -54,12 +58,11 @@
               background-color: #ede500;
             }
 
-
-          @media (max-width: 1023px) {
-            font-size: 20px;
-            margin-bottom: 20px;
-            padding-top: 3px;
-          }
+            @media (max-width: 1023px) {
+              font-size: 20px;
+              margin-bottom: 20px;
+              padding-top: 3px;
+            }
           }
         }
       }
@@ -81,9 +84,14 @@
           padding-left: 35px;
           line-height: 1.2;
 
-            @media (max-width: 1023px) {
-              padding-left: 0;
-            }
+          @media (max-width: 1023px) {
+            padding-left: 0;
+          }
+        }
+
+        @media (max-width: 767px) {
+          padding-bottom: 150px;
+          background-position-y: bottom;
         }
       }
 
@@ -110,14 +118,16 @@
         }
       }
     }
-  }
 
+    @media (max-width: 767px) {
+      background-position-y: bottom;
+    }
+  }
 
   &--access {
     padding-top: 120px;
     padding-bottom: 100px;
     background-position-y: 93px;
-
 
     @media (max-width: 1023px) {
       background-size: 50%;
@@ -139,8 +149,6 @@
           margin-bottom: 30px;
           font-size: 44px;
           line-height: 1.2;
-
-
 
           @media (max-width: 1023px) {
             padding-left: 0;
@@ -182,18 +190,24 @@
               background-color: $base-color;
             }
 
-
-
-          @media (max-width: 1023px) {
-            font-size: 20px;
-            margin-bottom: 20px;
-            padding-top: 3px;
+            @media (max-width: 1023px) {
+              font-size: 20px;
+              margin-bottom: 20px;
+              padding-top: 3px;
+            }
           }
-          }
+        }
+
+        @media (max-width: 767px) {
+          padding-bottom: 50px;
         }
       }
     }
 
+    @media (max-width: 767px) {
+      padding-bottom: 50px;
+      background-position-y: 30px;
+    }
   }
 }
 
@@ -372,7 +386,6 @@
     color: $base-color;
   }
 
-
   @media (max-width: 1023px) {
     font-size: 34px;
   }
@@ -400,5 +413,9 @@
 
   &:hover {
     background-color: darken($base-color, 5%);
+  }
+
+  @media (max-width: 767px) {
+    font-size: 20px;
   }
 }

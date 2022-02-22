@@ -42,6 +42,14 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  &--corp {
+    margin-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .contact-form__title {

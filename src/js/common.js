@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function (event) {
   $(".slider__list").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -88,37 +88,81 @@ $(document).ready(function () {
   // };
 
   // window.on("resize", changeFoooterPosition());
-});
 
-AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: "aos-init", // class applied after initialization
-  animatedClassName: "aos-animate", // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: "aos-init", // class applied after initialization
+    animatedClassName: "aos-animate", // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 100, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: "ease", // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
-});
-
-(() => {
-  const menuButton = document.querySelector(".main-nav__toggle");
-  const menuList = document.querySelector(".main-nav__list");
-
-  menuButton.addEventListener("click", () => {
-    let expanded = menuButton.getAttribute("aria-expanded") === "true";
-    menuButton.setAttribute("aria-expanded", !expanded);
-    menuButton.classList.toggle("main-nav__toggle--open");
-    menuList.classList.toggle("main-nav__list--open");
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 100, // values from 0 to 3000, with step 50ms
+    duration: 400, // values from 0 to 3000, with step 50ms
+    easing: "ease", // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
   });
-})();
+
+  (() => {
+    const menuButton = document.querySelector(".main-nav__toggle");
+    const menuList = document.querySelector(".main-nav__list");
+
+    menuButton.addEventListener("click", () => {
+      let expanded = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", !expanded);
+      menuButton.classList.toggle("main-nav__toggle--open");
+      menuList.classList.toggle("main-nav__list--open");
+    });
+  })();
+
+  const iosChecker = () => {
+    return (
+      [
+        "iPad Simulator",
+        "iPhone Simulator",
+        "iPod Simulator",
+        "iPad",
+        "iPhone",
+        "iPod",
+      ].includes(navigator.platform) ||
+      // iPad on iOS 13 detection
+      (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+    );
+  };
+
+  const modalTriggers = document.querySelectorAll(".popup-trigger");
+  const modalCloseTrigger = document.querySelector(".popup-modal__close");
+  const bodyBlackout = document.querySelector(".body-blackout");
+
+  modalTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const { popupTrigger } = trigger.dataset;
+      const popupModal = document.querySelector(
+        `[data-popup-modal="${popupTrigger}"]`
+      );
+
+      popupModal.classList.add("is--visible");
+      bodyBlackout.classList.add("is-blacked-out");
+
+      popupModal
+        .querySelector(".popup-modal__close")
+        .addEventListener("click", () => {
+          popupModal.classList.remove("is--visible");
+          bodyBlackout.classList.remove("is-blacked-out");
+        });
+
+      bodyBlackout.addEventListener("click", () => {
+        // TODO: Turn into a function to close modal
+        popupModal.classList.remove("is--visible");
+        bodyBlackout.classList.remove("is-blacked-out");
+      });
+    });
+  });
+});
